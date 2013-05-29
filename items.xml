@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<Items>
+<Item Id="1">
+    <Name>Hat</Name>
+    <Price>15.00</Price>
+    <Decrement>.2</Decrement>
+    <Interval>10</Interval>
+</Item>
+  <Item Id="2">
+    <Name>Shoes</Name>
+    <Price>45.00</Price>
+    <Decrement>.45</Decrement>
+    <Interval>30</Interval>
+  </Item>
+  <Item Id="3">
+    <Name>Glasses</Name>
+    <Price>100.00</Price>
+    <Decrement>1.00</Decrement>
+    <Interval>60</Interval>
+  </Item>
+</Items>
+
