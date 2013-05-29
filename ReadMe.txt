@@ -5,6 +5,34 @@ Description: An auction holds items that decay at a given rate.
 The Auction reads in the commands Start, Stop, Pause, Reset and List to invoke auction auctions. To end the program use the command 'exit'.
 The xml file items.xml should be in the same folder as the project file.
 
+The Problem:
+Problem: You have a list of auction items that are going to decay in price automatically rather than increase given user demand. 
+·        Criteria:
+o   You have the following 3 items: 
+§  { Id = 1, Name = "Hat", Price = 15.00m, Decrement = 0.20m, Interval = TimeSpan.FromSeconds(10) }
+§  { Id = 2, Name = "Shoes", Price = 45.00m, Decrement = 0.45m, Interval = TimeSpan.FromSeconds(30) }
+§  { Id = 3, Name = "Glasses", Price = 100.00m, Decrement = 1.00m, Interval = TimeSpan.FromSeconds(60) }
+o   Each of these items start at their specified price, and at their given intervals, subtract the decrement amount from their price. Upon reaching 0.00, they no longer decrement.
+·        Requirements:
+
+o   Build a simple application, that allows for several command inputs:
+
+§  "start" - This starts the auction. All items begin their decrement cycles.
+
+§  "pause" - This pauses the auction.
+
+§  "reset" - This resets the prices and intervals.
+
+§  "list" - This shows each item at their current price and where in the interval they are. For example, after "start"ing the auction and after 13 seconds, "list"ing would show: 
+
+·        Hat: 14.80, next drop: 7 seconds       
+
+·        Shoes: 45.00, next drop: 27 seconds
+
+·        Glasses: 100.00, next drop: 57 seconds
+
+ 
+
 Implementation Considerations:
 1. Architecture options: Finite State Machine vs State Pattern
 The State Pattern was chosen over a Finite State Machine implementation to allow for scalability - easy addition of new states and commands.
